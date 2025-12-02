@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PremiumShop - Onlayn Do'kon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="container">
+            <button class="lang-btn active" data-lang="uz">
+                <i class="fas fa-flag"></i> O'zbek
+            </button>
+            <button class="lang-btn" data-lang="ru">
+                <i class="fas fa-flag"></i> Русский
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span data-translate="site_name">PremiumShop</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-translate="home">Asosiy</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="products">Mahsulotlar</a></li>
+                <li><a href="contact.html" class="nav-link" data-translate="contact">Aloqa</a></li>
+                <li class="auth-links">
+                    <a href="login.html" class="nav-link auth-btn" data-translate="login">
+                        <i class="fas fa-sign-in-alt"></i> Kirish
+                    </a>
+                    <a href="register.html" class="nav-link auth-btn register-btn" data-translate="register">
+                        <i class="fas fa-user-plus"></i> Ro'yxatdan o'tish
+                    </a>
+                </li>
+                <li><a href="admin.html" class="nav-link admin-link">
+                        <i class="fas fa-user-cog"></i> <span data-translate="admin">Admin</span>
+                    </a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 data-translate="hero_title">Premium Mahsulotlar Do'koni</h1>
+            <p data-translate="hero_subtitle">Har xil turdagi mahsulotlarni eng yaxshi narxlarda toping</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-shopping-bag"></i> <span data-translate="view_products">Mahsulotlarni
+                        ko'rish</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Products -->
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="featured_products">Tavsiya etilgan mahsulotlar</h2>
+                <a href="products.html" class="btn btn-outline" data-translate="view_all">
+                    <i class="fas fa-eye"></i> Barchasini ko'rish
+                </a>
+            </div>
+
+            <div class="products-grid" id="featured-products">
+                <!-- 3 ta mahsulot kardlari -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400" alt="Smart Watch"
+                        class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Smart Watch Series 7</h3>
+                        <div class="product-price">850,000 so'm</div>
+                        <p class="product-description">Aqlli soat, suvga chidamli, yurak urish tezligi sensori</p>
+                        <div class="product-meta">
+                            <span class="product-age">Yoshi: 1 yil</span>
+                            <button class="order-btn">
+                                <i class="fas fa-shopping-cart"></i> Buyurtma berish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+                        alt="Wireless Headphones" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Headphones Pro</h3>
+                        <div class="product-price">450,000 so'm</div>
+                        <p class="product-description">Shovqinni bartaraf qiluvchi simsiz naushniklar</p>
+                        <div class="product-meta">
+                            <span class="product-age">Yoshi: Yangi</span>
+                            <button class="order-btn">
+                                <i class="fas fa-shopping-cart"></i> Buyurtma berish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Gaming Laptop"
+                        class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Laptop RTX 4080</h3>
+                        <div class="product-price">12,500,000 so'm</div>
+                        <p class="product-description">Yuqori darajadagi o'yinlar uchun mos laptop</p>
+                        <div class="product-meta">
+                            <span class="product-age">Yoshi: 2 yil</span>
+                            <button class="order-btn">
+                                <i class="fas fa-shopping-cart"></i> Buyurtma berish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 data-translate="fast_delivery">Tez Yetkazib Berish</h3>
+                    <p data-translate="fast_delivery_desc">O'zbekiston bo'ylab 1-3 kun ichida yetkazib beramiz</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-translate="quality_guarantee">Sifat Kafolati</h3>
+                    <p data-translate="quality_guarantee_desc">Barcha mahsulotlarimiz sifat va kafolat bilan</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-translate="support_24_7">24/7 Qo'llab-quvvatlash</h3>
+                    <p data-translate="support_24_7_desc">Har qanday savol uchun doimiy qo'llab-quvvatlash</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Preview -->
+    <section class="categories-preview">
+        <div class="container">
+            <h2 data-translate="popular_categories">Mashhur Kategoriyalar</h2>
+            <div class="categories-grid">
+                <a href="category.html?cat=electronics" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 data-translate="electronics">Elektronika</h3>
+                    <p data-translate="electronics_desc">Smartfonlar, noutbuklar, planshetlar</p>
+                </a>
+
+                <a href="vehicles.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 data-translate="vehicles">Transport</h3>
+                    <p data-translate="vehicles_desc">Avtomobillar, mototsikllar, velosipedlar</p>
+                </a>
+
+                <a href="machines.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 data-translate="machines">Mashinalar</h3>
+                    <p data-translate="machines_desc">Qishloq xo'jaligi, qurilish mashinalari</p>
+                </a>
+
+                <a href="category.html?cat=home" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 data-translate="home_appliances">Uy-ro'zg'or</h3>
+                    <p data-translate="home_appliances_desc">Maishiy texnika, mebellar, bezaklar</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-store"></i>
+                        <span data-translate="site_name">PremiumShop</span>
+                    </div>
+                    <p data-translate="footer_desc">Eng yaxshi mahsulotlar, eng yaxshi narxlarda</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="quick_links">Tezkor Havolalar</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">Asosiy</a></li>
+                        <li><a href="products.html" data-translate="products">Mahsulotlar</a></li>
+                        <li><a href="about.html" data-translate="about">Biz haqimizda</a></li>
+                        <li><a href="contact.html" data-translate="contact">Aloqa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="contact_info">Aloqa Ma'lumotlari</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Toshkent shahar,
+                                Yunusobod tumani</span></li>
+                        <li><i class="fas fa-phone"></i> +998 90 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@premiumshop.uz</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="follow_us">Bizni Kuzatib Boring</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> PremiumShop. <span data-translate="all_rights">Barcha huquqlar
+                        himoyalangan.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+    <script src="language.js"></script>
+</body>
+
+</html>

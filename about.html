@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="about">Biz haqimizda | PremiumShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+        
+        .about-content {
+            padding: 80px 0;
+        }
+        
+        .about-section {
+            margin-bottom: 60px;
+        }
+        
+        .about-section h2 {
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .about-section h2 i {
+            font-size: 1.5rem;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .mission-card, .vision-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+        
+        .mission-card i, .vision-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        
+        .team-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .team-card h4 {
+            margin: 20px 0 5px;
+            font-size: 1.2rem;
+        }
+        
+        .team-card p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+        
+        .value-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="container">
+            <button class="lang-btn active" data-lang="uz">
+                <i class="fas fa-flag"></i> O'zbek
+            </button>
+            <button class="lang-btn" data-lang="ru">
+                <i class="fas fa-flag"></i> Русский
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span data-translate="site_name">PremiumShop</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="home">Asosiy</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="products">Mahsulotlar</a></li>
+                <li><a href="category.html" class="nav-link" data-translate="categories">Kategoriyalar</a></li>
+                <li><a href="about.html" class="nav-link active" data-translate="about">Biz haqimizda</a></li>
+                <li><a href="contact.html" class="nav-link" data-translate="contact">Aloqa</a></li>
+                <li class="auth-links">
+                    <a href="login.html" class="nav-link auth-btn" data-translate="login">
+                        <i class="fas fa-sign-in-alt"></i> Kirish
+                    </a>
+                    <a href="register.html" class="nav-link auth-btn register-btn" data-translate="register">
+                        <i class="fas fa-user-plus"></i> Ro'yxatdan o'tish
+                    </a>
+                </li>
+                <li><a href="admin.html" class="nav-link admin-link">
+                    <i class="fas fa-user-cog"></i> <span data-translate="admin">Admin</span>
+                </a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <header class="about-hero">
+        <div class="container">
+            <h1 data-translate="about_us">Biz haqimizda</h1>
+            <p data-translate="about_subtitle">PremiumShop - ishonchli onlayn do'koningiz</p>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <main class="container about-content">
+        <!-- Company Story -->
+        <section class="about-section">
+            <h2><i class="fas fa-history"></i> <span data-translate="our_story">Bizning tariximiz</span></h2>
+            <div class="content">
+                <p data-translate="story_text1">
+                    2015 yilda asos solingan PremiumShop O'zbekistondagi yetakchi onlayn do'konlardan biriga aylandi. 
+                    Bizning maqsadimiz - mijozlarimizga eng yaxshi sifat va xizmatni taqdim etish.
+                </p>
+                <p data-translate="story_text2">
+                    Boshlang'ichda kichik elektronika do'koni sifatida faoliyat boshlagan biz, 
+                    hozirda turli sohalardagi 1000 dan ortiq mahsulotlarni taklif etamiz.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="about-section">
+            <h2><i class="fas fa-bullseye"></i> <span data-translate="mission_vision">Missiya va Vizyon</span></h2>
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <i class="fas fa-flag"></i>
+                    <h3 data-translate="mission">Missiyamiz</h3>
+                    <p data-translate="mission_text">
+                        Har bir mijozga sifatli mahsulotlarni qulay narxlarda yetkazib berish 
+                        va mukammal xizmat ko'rsatish orqali ularning ishonchini qozonish.
+                    </p>
+                </div>
+                
+                <div class="vision-card">
+                    <i class="fas fa-eye"></i>
+                    <h3 data-translate="vision">Vizyonimiz</h3>
+                    <p data-translate="vision_text">
+                        Markaziy Osiyoning eng yirik va ishonchli onlayn savdo platformasiga 
+                        aylanish va raqamli iqtisodiyotni rivojlantirishga hissa qo'shish.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="about-section">
+            <h2><i class="fas fa-star"></i> <span data-translate="our_values">Bizning qadriyatlarimiz</span></h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3 data-translate="integrity">Halollik</h3>
+                    <p data-translate="integrity_text">
+                        Biz barcha operatsiyalarimizda ochiq va halol bo'lishga intilamiz.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3 data-translate="customer_first">Mijoz birinchi o'rinda</h3>
+                    <p data-translate="customer_first_text">
+                        Har qanday qaror mijoz manfaatlarini hisobga olgan holda qabul qilinadi.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-medal"></i>
+                    <h3 data-translate="quality">Sifat</h3>
+                    <p data-translate="quality_text">
+                        Biz faqat sertifikatlangan va yuqori sifatli mahsulotlarni taklif etamiz.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3 data-translate="innovation">Innovatsiya</h3>
+                    <p data-translate="innovation_text">
+                        Doimiy ravishda yangi texnologiyalar va usullarni qo'llab, xizmatimizni yaxshilaymiz.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="about-section">
+            <h2><i class="fas fa-chart-line"></i> <span data-translate="achievements">Yutuqlarimiz</span></h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <h4 data-translate="years_exp">Yillik tajriba</h4>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <h4 data-translate="happy_customers">Mamnun mijozlar</h4>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <h4 data-translate="products">Mahsulotlar</h4>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <h4 data-translate="regions">Viloyatlar</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="about-section">
+            <h2><i class="fas fa-users"></i> <span data-translate="our_team">Bizning jamoa</span></h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Jamoa a'zosi" class="team-img">
+                    <h4>Azizbek Ismoilov</h4>
+                    <p data-translate="ceo">Bosh direktor</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400" alt="Jamoa a'zosi" class="team-img">
+                    <h4>Malika Karimova</h4>
+                    <p data-translate="sales_director">Sotish bo'limi boshlig'i</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400" alt="Jamoa a'zosi" class="team-img">
+                    <h4>Javohir To'rayev</h4>
+                    <p data-translate="tech_director">Texnik direktor</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Jamoa a'zosi" class="team-img">
+                    <h4>Dilnoza Xamidova</h4>
+                    <p data-translate="marketing_director">Marketing direktori</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-store"></i>
+                        <span data-translate="site_name">PremiumShop</span>
+                    </div>
+                    <p data-translate="footer_desc">Eng yaxshi mahsulotlar, eng yaxshi narxlarda</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-translate="quick_links">Tezkor Havolalar</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">Asosiy</a></li>
+                        <li><a href="products.html" data-translate="products">Mahsulotlar</a></li>
+                        <li><a href="about.html" data-translate="about">Biz haqimizda</a></li>
+                        <li><a href="contact.html" data-translate="contact">Aloqa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-translate="contact_info">Aloqa Ma'lumotlari</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Toshkent shahar, Yunusobod tumani</span></li>
+                        <li><i class="fas fa-phone"></i> +998 90 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@premiumshop.uz</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-translate="follow_us">Bizni Kuzatib Boring</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> PremiumShop. <span data-translate="all_rights">Barcha huquqlar himoyalangan.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="language.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

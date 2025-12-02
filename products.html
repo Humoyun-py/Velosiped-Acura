@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="products">Mahsulotlar | PremiumShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="container">
+            <button class="lang-btn active" data-lang="uz">
+                <i class="fas fa-flag"></i> O'zbek
+            </button>
+            <button class="lang-btn" data-lang="ru">
+                <i class="fas fa-flag"></i> Русский
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span data-translate="site_name">PremiumShop</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="home">Asosiy</a></li>
+                <li><a href="products.html" class="nav-link active" data-translate="products">Mahsulotlar</a></li>
+                <li><a href="contact.html" class="nav-link" data-translate="contact">Aloqa</a></li>
+                <li class="auth-links">
+                    <a href="login.html" class="nav-link auth-btn" data-translate="login">
+                        <i class="fas fa-sign-in-alt"></i> Kirish
+                    </a>
+                    <a href="register.html" class="nav-link auth-btn register-btn" data-translate="register">
+                        <i class="fas fa-user-plus"></i> Ro'yxatdan o'tish
+                    </a>
+                </li>
+                <li><a href="admin.html" class="nav-link admin-link">
+                        <i class="fas fa-user-cog"></i> <span data-translate="admin">Admin</span>
+                    </a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 data-translate="all_products">Barcha Mahsulotlar</h1>
+            <p data-translate="products_subtitle">Bizning barcha mahsulotlarimiz katalogi</p>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="filters-header">
+            <h2><i class="fas fa-filter"></i> <span data-translate="filters">Filtrlash</span></h2>
+            <button class="btn btn-outline btn-sm" id="clearFilters">
+                <i class="fas fa-times"></i> <span data-translate="clear_filters">Filtrlarni tozalash</span>
+            </button>
+        </div>
+
+        <div class="filters-grid">
+            <!-- Price Filter -->
+            <div class="filter-group">
+                <h3 data-translate="price_range">Narx oralig'i</h3>
+                <div class="price-inputs">
+                    <input type="number" id="minPrice" placeholder="Min" data-placeholder-uz="Min"
+                        data-placeholder-ru="Мин">
+                    <span>-</span>
+                    <input type="number" id="maxPrice" placeholder="Max" data-placeholder-uz="Max"
+                        data-placeholder-ru="Макс">
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+                <h3 data-translate="category">Kategoriya</h3>
+                <select id="categoryFilter" class="form-control">
+                    <option value="" data-translate="all_categories">Barcha kategoriyalar</option>
+                    <option value="Bicycle" data-translate="Bicycle">Velosiped</option>
+                    <option value="MiniMachines" data-translate="MiniMachines">Mini Mashinalar</option>
+                </select>
+            </div>
+
+            <!-- Sort Filter -->
+            <div class="filter-group">
+                <h3 data-translate="sort_by">Saralash</h3>
+                <select id="sortFilter" class="form-control">
+                    <option value="newest" data-translate="newest">Yangi avval</option>
+                    <option value="price_low" data-translate="price_low">Arzon narx</option>
+                    <option value="price_high" data-translate="price_high">Qimmat narx</option>
+                    <option value="name" data-translate="name_a_z">Nom A-Z</option>
+                </select>
+            </div>
+
+            <!-- Search -->
+            <div class="filter-group">
+                <h3 data-translate="search">Qidirish</h3>
+                <div class="search-box">
+                    <input type="text" id="searchInput" data-placeholder-uz="Mahsulot nomi..."
+                        data-placeholder-ru="Название товара..." placeholder="Mahsulot nomi...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-actions">
+            <button class="btn btn-primary" id="applyFilters">
+                <i class="fas fa-check"></i> <span data-translate="apply_filters">Filtrlarni qo'llash</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="filter-actions">
+        <button class="btn btn-primary" id="applyFilters">
+            <i class="fas fa-check"></i> <span data-translate="apply_filters">Filtrlarni qo'llash</span>
+        </button>
+    </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="products-header">
+            <h2><i class="fas fa-box-open"></i> <span data-translate="products_list">Mahsulotlar ro'yxati</span></h2>
+            <div class="products-stats">
+                <span data-translate="showing">Ko'rsatilmoqda:</span>
+                <strong id="showingCount">0</strong> / <span id="totalCount">0</span>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Skeleton Loading -->
+            <div class="skeleton-container">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <!-- Pagination will be generated here -->
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3 data-translate="no_results">Hech narsa topilmadi</h3>
+            <p data-translate="no_results_desc">Sizning qidiruvingizga mos mahsulot topilmadi</p>
+            <button class="btn btn-outline" id="resetSearch">
+                <i class="fas fa-redo"></i> <span data-translate="reset_search">Qidiruvni qayta o'rnatish</span>
+            </button>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-store"></i>
+                        <span data-translate="site_name">PremiumShop</span>
+                    </div>
+                    <p data-translate="footer_desc">Eng yaxshi mahsulotlar, eng yaxshi narxlarda</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="quick_links">Tezkor Havolalar</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">Asosiy</a></li>
+                        <li><a href="products.html" data-translate="products">Mahsulotlar</a></li>
+                        <li><a href="about.html" data-translate="about">Biz haqimizda</a></li>
+                        <li><a href="contact.html" data-translate="contact">Aloqa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="contact_info">Aloqa Ma'lumotlari</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Toshkent shahar,
+                                Yunusobod tumani</span></li>
+                        <li><i class="fas fa-phone"></i> +998 90 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@premiumshop.uz</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 data-translate="follow_us">Bizni Kuzatib Boring</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> PremiumShop. <span data-translate="all_rights">Barcha huquqlar
+                        himoyalangan.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js" type="module"></script>
+    <script src="language.js"></script>
+</body>
+
+</html>
